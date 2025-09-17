@@ -206,6 +206,65 @@ html,body { height: 100%; }
   color: #444;
 }
 
+.about-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.about-img .profile-pic {
+  width: 160px;        /* much smaller size */
+  height: 160px;       /* keeps it square */
+  border-radius: 50%;  /* makes it a clean circle */
+  object-fit: cover;   /* ensures it doesn’t stretch */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow */
+  border: 3px solid #eee; /* clean border for polish */
+}
+
+/* Base floating button style */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+/* Call button */
+.call-btn {
+  background: #28a745; /* green */
+  margin-bottom: 75px; /* keep above WhatsApp */
+}
+
+.call-btn:hover {
+  background: #218838;
+  transform: scale(1.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* WhatsApp button */
+.whatsapp-btn {
+  background: #25D366; /* WhatsApp green */
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+  transform: scale(1.15);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
 
 /* TYPOGRAPHY */
 body {
