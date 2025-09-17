@@ -86,26 +86,33 @@
   <div class="container">
     <h2 class="portfolio-section-title">Project Reels</h2>
     <div class="reels-grid">
-      <video src="reels/reel1.mp4" controls></video>
-      <video src="reels/reel2.mp4" controls></video>
-      <video src="reels/reel3.mp4" controls></video>
-      <video src="reels/reel4.mp4" controls></video>
+      <video src="reels/reel1.mp4" controls autoplay loop></video>
+      <video src="reels/reel2.mp4" controls autoplay loop></video>
+      <video src="reels/reel3.mp4" controls autoplay loop></video>
+      <video src="reels/reel4.mp4" controls autoplay loop></video>
     </div>
   </div>
 </section>
 
 <!-- PROJECT IMAGES -->
-<section class="section">
-  <div class="container">
-    <h2 class="portfolio-section-title">Project Gallery</h2>
-    <div class="gallery">
-      <img src="images/project1.jpg" alt="Project 1">
-      <img src="images/project2.jpg" alt="Project 2">
-      <img src="images/project3.jpg" alt="Project 3">
-      <img src="images/project4.jpg" alt="Project 4">
-      <img src="images/project5.jpg" alt="Project 5">
-      <img src="images/project6.jpg" alt="Project 6">
-    </div>
+<!-- Project Gallery -->
+<div class="gallery">
+  <figure><img src="images/project1.jpg" alt="Project 1" class="lightbox-item"></figure>
+  <figure><img src="images/project2.jpg" alt="Project 2" class="lightbox-item"></figure>
+  <figure><img src="images/project3.jpg" alt="Project 3" class="lightbox-item"></figure>
+  <figure><img src="images/project4.jpg" alt="Project 4" class="lightbox-item"></figure>
+  <figure><img src="images/project5.jpg" alt="Project 5" class="lightbox-item"></figure>
+</div>
+
+<!-- Lightbox Container -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  <a class="prev">&#10094;</a>
+  <a class="next">&#10095;</a>
+</div>
+
+
 
     <div class="center">
       <a href="https://www.instagram.com/harmonyheaveninteriors/" target="_blank" class="btn btn-primary">📸 See More on Instagram</a>
@@ -139,4 +146,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-

@@ -30,6 +30,50 @@ document.addEventListener("DOMContentLoaded", () => {
   if(heroTitle) setTimeout(()=>{ heroTitle.classList.add("revealed"); }, 200);
   if(heroSub) setTimeout(()=>{ heroSub.classList.add("revealed"); }, 400);
 
+  // FAQ toggle (multiple open allowed)
+document.querySelectorAll(".faq-question").forEach(button => {
+  button.addEventListener("click", () => {
+    const faq = button.parentElement;
+
+    // toggle this one only
+    faq.classList.toggle("open");
+
+    // expand/collapse the answer
+    const answer = faq.querySelector(".faq-answer");
+    if (faq.classList.contains("open")) {
+      answer.style.maxHeight = answer.scrollHeight + "px";
+    } else {
+      answer.style.maxHeight = null;
+    }
+  });
+});
+
+
+    // Lightbox for portfolio
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".lightbox .close");
+
+document.querySelectorAll(".lightbox-trigger").forEach(img => {
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    lightbox.style.display = "none";
+  });
+}
+
+// Close when clicking outside image
+lightbox.addEventListener("click", (e) => {
+  if (e.target !== lightboxImg) {
+    lightbox.style.display = "none";
+  }
+});
+
   // Contact form simple handler
   const contactForm = document.getElementById("contactForm");
   if(contactForm){
